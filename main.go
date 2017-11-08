@@ -9,9 +9,9 @@ import (
 func handler(w http.ResponseWriter, r *http.Request) {
 	var userAgent = r.Header.Get("User-Agent")
 	if strings.Contains(userAgent, "github-camo") {
-		http.Redirect(w, r, "https://img.youtube.com/vi/"+r.URL.Query().Get("v")+"/0.jpg", 200)
+		http.Redirect(w, r, "https://img.youtube.com/vi/"+r.URL.Query().Get("v")+"/0.jpg", 301)
 	} else {
-		http.Redirect(w, r, "https://youtube.com/watch?v="+r.URL.Query().Get("v"), 200)
+		http.Redirect(w, r, "https://youtube.com/watch?v="+r.URL.Query().Get("v"), 301)
 	}
 }
 
