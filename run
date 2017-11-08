@@ -1,0 +1,3 @@
+#!/bin/bash
+
+go build -o dist/git-video.exe && ./dist/git-video.exe
